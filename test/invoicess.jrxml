@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="today_invoice" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0597a3f8-2333-4c8e-b602-ba1d666eaf99">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from invoice where Date=$P{Date};]]>
+	</queryString>
+	<field name="INV_ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Customer_NIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Price" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Employee_NIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Vehicle_Engine_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Vehicle_Chasis_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="138" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="10" width="220" height="102" uuid="8b5c98f7-6c6b-4658-b790-fa0a2c5d44ae"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Desktop\\icons\\dealer-logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="230" y="118" width="124" height="20" uuid="b8100a3b-08ef-4d2c-809d-4ad424c15bbe"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoices]]></text>
+			</staticText>
+			<image>
+				<reportElement x="459" y="65" width="96" height="53" uuid="32cb6665-2e9f-46ea-a0f0-754ef390cc74"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Desktop\\icons\\Capture.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="20" uuid="3e1b58a8-d78d-417f-9bd0-eeea84a583f3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[INV_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="79" height="20" uuid="2ef950fa-cbf0-4c8c-8db4-02431dbf6b15"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer_NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="79" height="20" uuid="6fac812d-0a1b-4330-bf64-29f6c0f922b6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="79" height="20" uuid="999c68b3-5853-4773-a02e-73a7dd6ef14b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="0" width="79" height="20" uuid="97ac277b-dd37-4c3a-9588-a5c92c67cdee"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee_NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="0" width="79" height="20" uuid="afde64f3-b1ab-43a0-8245-47ad5b154298"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Engine No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="0" width="79" height="20" uuid="475d75e3-1835-4feb-bac4-b5f529b7df82"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chasis No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="20" uuid="d4568da0-9abd-4bc9-9f11-b952ee68c99b"/>
+				<textFieldExpression><![CDATA[$F{INV_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="79" height="20" uuid="a0296594-bce1-4acc-b314-00303a83205d"/>
+				<textFieldExpression><![CDATA[$F{Customer_NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="79" height="20" uuid="285c75c8-6ba3-407d-bcf1-94ce03d505ee"/>
+				<textFieldExpression><![CDATA[$F{Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="79" height="20" uuid="abc9e74f-1add-4510-95b0-e85a058b98a1"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="79" height="20" uuid="5d5fbb78-9993-41e5-bed8-f429b4fd974e"/>
+				<textFieldExpression><![CDATA[$F{Employee_NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="0" width="79" height="20" uuid="ba781748-7b90-4780-aa83-1359ef75afd3"/>
+				<textFieldExpression><![CDATA[$F{Vehicle_Engine_No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="79" height="20" uuid="03ee89bc-dc69-46bf-b9a5-af9d1f469602"/>
+				<textFieldExpression><![CDATA[$F{Vehicle_Chasis_No}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
